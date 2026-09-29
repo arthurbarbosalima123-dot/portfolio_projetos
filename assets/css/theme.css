@@ -1,0 +1,267 @@
+/*
+	Tema escuro azul/roxo — carregado depois de main.css e sobrescreve as cores
+	e componentes do template Editorial. Para voltar ao visual antigo, basta
+	remover a linha que importa este arquivo no index.html.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+:root {
+	--bg: #0B1020;
+	--bg-soft: #111831;
+	--card: rgba(255, 255, 255, 0.04);
+	--card-hover: rgba(255, 255, 255, 0.07);
+	--border: rgba(255, 255, 255, 0.08);
+	--text: #C9D1E6;
+	--muted: #8A94B3;
+	--heading: #F2F5FF;
+	--blue: #4F8CFF;
+	--violet: #9B6BFF;
+	--gradient: linear-gradient(120deg, #4F8CFF 0%, #9B6BFF 100%);
+	--radius: 18px;
+}
+
+/* ---------- Base ---------- */
+html { scroll-behavior: smooth; }
+
+body {
+	background-color: var(--bg);
+	background-image:
+		radial-gradient(900px 600px at 85% -10%, rgba(155, 107, 255, 0.18), transparent 60%),
+		radial-gradient(800px 600px at -10% 30%, rgba(79, 140, 255, 0.14), transparent 60%);
+	background-attachment: fixed;
+}
+
+body, input, select, textarea {
+	color: var(--text);
+	font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--heading);
+	font-family: "Space Grotesk", sans-serif;
+	letter-spacing: -0.01em;
+}
+
+strong, b { color: var(--heading); }
+
+p { color: var(--text); }
+
+a {
+	color: #8FB2FF;
+	border-bottom-color: rgba(143, 178, 255, 0.4);
+}
+	a:hover {
+		color: #C3A6FF !important;
+		border-bottom-color: #C3A6FF;
+	}
+
+hr { border-bottom-color: var(--border); }
+
+::selection { background: rgba(155, 107, 255, 0.35); color: #fff; }
+
+/* ---------- Layout ---------- */
+#main > .inner > section { border-top: 1px solid var(--border); }
+
+#header {
+	border-bottom: 1px solid var(--border);
+}
+	#header .logo { color: var(--muted); font-family: "Space Grotesk", sans-serif; }
+	#header .logo strong {
+		background: var(--gradient);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
+
+/* ---------- Banner ---------- */
+#banner h1 {
+	font-size: 3.2em;
+	line-height: 1.2;
+	background: linear-gradient(120deg, #FFFFFF 30%, #B9CCFF 65%, #C9A9FF 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+#banner p,
+header p {
+	color: var(--muted);
+	font-family: "Inter", sans-serif;
+	font-size: 1.1em;
+	letter-spacing: 0;
+	text-transform: none;
+	margin-top: 0;
+}
+
+#banner .image img {
+	border-radius: 24px;
+	box-shadow: 0 0 0 1px var(--border), 0 20px 60px rgba(79, 140, 255, 0.25);
+}
+
+/* ---------- Títulos de seção ---------- */
+header.major > :last-child {
+	border-bottom: 0;
+	position: relative;
+	padding-bottom: 0.4em;
+}
+	header.major > :last-child:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 3px;
+		border-radius: 3px;
+		background: var(--gradient);
+	}
+
+header.main h1 { font-size: 2.6em; }
+
+/* Experiências e "Sobre mim" */
+#main section > h2 {
+	font-size: 1.35em;
+	margin-top: 1.6em;
+	padding-left: 0.9em;
+	border-left: 3px solid var(--violet);
+}
+#main section > h2 + p { color: var(--muted); }
+
+/* ---------- Habilidades ---------- */
+.features {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.5em;
+	margin: 0 0 2em 0;
+	width: 100%;
+}
+	.features article,
+	.features article:nth-child(2n - 1),
+	.features article:nth-child(2n),
+	.features article:nth-last-child(1),
+	.features article:nth-last-child(2) {
+		width: auto;
+		margin: 0;
+		padding: 1.8em;
+		align-items: flex-start;
+		background: var(--card);
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+	}
+	.features article:hover {
+		transform: translateY(-4px);
+		background: var(--card-hover);
+		border-color: rgba(155, 107, 255, 0.45);
+	}
+	.features article .icon {
+		width: 4em;
+		height: 4em;
+		line-height: 4em;
+		margin: 0 1.5em 0 0;
+		border-radius: 14px;
+		background: var(--gradient);
+		box-shadow: 0 8px 24px rgba(79, 140, 255, 0.3);
+	}
+		.features article .icon:before { color: #fff; font-size: 1.5rem; }
+		.features article .icon:after { display: none; }
+	.features article h3 { margin-bottom: 0.6em; }
+	.features article ul { color: var(--muted); margin-bottom: 0; }
+
+@media screen and (max-width: 980px) {
+	.features { grid-template-columns: 1fr; }
+}
+@media screen and (max-width: 480px) {
+	.features article .icon { margin: 0 0 1em 0; }
+}
+
+/* ---------- Projetos ---------- */
+.posts {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+	gap: 2em;
+	margin: 0 0 2em 0;
+	width: 100%;
+}
+	.posts article,
+	.posts article:nth-last-child(1),
+	.posts article:nth-last-child(2),
+	.posts article:nth-last-child(3) {
+		width: auto;
+		margin: 0;
+		padding: 1.4em 1.4em 1.8em 1.4em;
+		display: flex;
+		flex-direction: column;
+		background: var(--card);
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		backdrop-filter: blur(6px);
+		transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+	}
+	.posts article:hover {
+		transform: translateY(-4px);
+		border-color: rgba(79, 140, 255, 0.45);
+		box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+	}
+	.posts article:before,
+	.posts article:after { display: none !important; }
+	.posts article .image {
+		margin: 0 0 1.5em 0;
+		border-bottom: 0;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+		.posts article .image img {
+			aspect-ratio: 3 / 2;
+			object-fit: cover;
+			transition: transform 0.4s ease;
+		}
+		.posts article:hover .image img { transform: scale(1.04); }
+	.posts article h4 { font-size: 1.15em; line-height: 1.35; }
+	.posts article p { color: var(--muted); font-size: 0.95em; }
+	.posts article ul { color: var(--muted); font-size: 0.92em; }
+	.posts article ul.actions { margin-top: auto; padding-top: 0.5em; margin-bottom: 0; }
+
+@media screen and (max-width: 480px) {
+	.posts { grid-template-columns: 1fr; }
+}
+
+/* ---------- Botões ---------- */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	font-family: "Space Grotesk", sans-serif;
+	letter-spacing: 0.06em;
+	border-radius: 999px;
+	box-shadow: inset 0 0 0 1.5px rgba(143, 178, 255, 0.55);
+	color: #DCE5FF !important;
+	transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+	.button:hover,
+	button:hover {
+		background: rgba(79, 140, 255, 0.12);
+		box-shadow: inset 0 0 0 1.5px #8FB2FF;
+		border-bottom: 0;
+	}
+	/* O primeiro botão de cada card ganha destaque em degradê */
+	ul.actions li:first-child .button {
+		background: var(--gradient);
+		box-shadow: 0 6px 20px rgba(79, 140, 255, 0.3);
+		color: #fff !important;
+	}
+	ul.actions li:first-child .button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 10px 28px rgba(155, 107, 255, 0.4);
+	}
+
+/* ---------- Contato ---------- */
+ul.contact li {
+	border-top-color: var(--border);
+	color: var(--text);
+}
+	ul.contact li:before {
+		background: var(--gradient);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
