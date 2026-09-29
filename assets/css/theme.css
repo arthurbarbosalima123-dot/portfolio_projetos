@@ -176,7 +176,7 @@ header.main h1 { font-size: 2.6em; }
 /* ---------- Projetos ---------- */
 .posts {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 2em;
 	margin: 0 0 2em 0;
 	width: 100%;
@@ -210,7 +210,7 @@ header.main h1 { font-size: 2.6em; }
 		overflow: hidden;
 	}
 		.posts article .image img {
-			aspect-ratio: 3 / 2;
+			aspect-ratio: 16 / 9;
 			object-fit: cover;
 			transition: transform 0.4s ease;
 		}
@@ -241,7 +241,7 @@ ul.tags {
 		border-radius: 999px;
 	}
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 900px) {
 	.posts { grid-template-columns: 1fr; }
 }
 
