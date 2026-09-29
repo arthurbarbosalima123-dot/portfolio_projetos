@@ -32,6 +32,7 @@
 											<h1>Olá, seja muito bem-vindo (a) ao meu portfólio de projetos de Análise de Dados.</h1>
 											<p>Nessa página, eu demonstro minhas habilidades de resolver problemas de negócio utilizando conceitos e ferramentas de Análise de dados, através de projetos com dados públicos.<br/>
 											 Você vai encontrar também, minhas experiências profissionais, habilidades, ferramentas e conceitos envolvendo Análise de Dados.</p>
+										</header>
 									</div>
 									<span class="image object">
 										<img src="images/pic12.jpeg" alt="" />
@@ -96,7 +97,7 @@ Formado em Administração e cursando Pós-graduação em Data Analytics na FIAP
 											<div class="content">
 												<h3>Estatística</h3>
 												<ul>
-																<li>Estatística descritiva (média, mediana, moda, variância e desvio-padrão)
+																<li>Estatística descritiva (média, mediana, moda, variância e desvio-padrão).</li>
 																<li>Interpretação de distribuições e gráficos estatísticos.</li>
 																<li>Aplicação de métricas estatísticas em dashboards e relatórios.</li>
 															</ul>
@@ -175,22 +176,59 @@ Conclusão: antes de contratar mais entregadores, a empresa precisa resolver a l
 										<article>
 											<a href="#" class="image"><img src="images/pic03.png" alt="" /></a>
 											<h4>Projeto 3 — Dashboard de Pagamentos e Comportamento de Compra</h4>
-											<p>99.440 pedidos e R$ 1,6 bilhão em pagamentos: a gestão precisava entender como os clientes pagavam e onde o dinheiro estava travado. Com Power BI, Power Query e DAX, transformei essa base densa em respostas claras — cruzando status de pedidos, tipos de pagamento e ticket médio com filtros interativos em tempo real.🔵 73,92% no crédito — base madura digitalmente, mas boleto (19%) ainda exige estratégia de follow-up🟢 Operação saudável — valor concentrado em "Delivered", cancelamentos com impacto residual 🔴 Alerta de retenção — cancelados têm ticket médio de R$ 21.574, praticamente igual aos em andamento. Cada cancelamento evitado é receita salva. Dados de pagamento não são só financeiros — são comportamenta</h4>
+											<p>99.440 pedidos e R$ 1,6 bilhão em pagamentos: a gestão precisava entender como os clientes pagavam e onde o dinheiro estava travado. Com Power BI, Power Query e DAX, transformei essa base densa em respostas claras — cruzando status de pedidos, tipos de pagamento e ticket médio com filtros interativos em tempo real.🔵 73,92% no crédito — base madura digitalmente, mas boleto (19%) ainda exige estratégia de follow-up🟢 Operação saudável — valor concentrado em "Delivered", cancelamentos com impacto residual 🔴 Alerta de retenção — cancelados têm ticket médio de R$ 21.574, praticamente igual aos em andamento. Cada cancelamento evitado é receita salva. Dados de pagamento não são só financeiros — são comportamentais.</p>
+											<h4>As ferramentas utilizadas foram:</h4>
 															<ul>
 																<li>Power BI – Dashboard com análise de comportamento de pagamento e mapeamento de risco por status do pedido.</li>
 																<li> Power Query – ETL para consolidação e padronização de 103.886 transações</li>
 																<li> DAX – Medidas de ticket médio, volume por tipo de pagamento e análise de cancelamentos.</li>
 																<li> Excel – Base de dados e validação inicial das métricas.</li>
-															</ul>	
-
-															</ul>	
+															</ul>
 											<ul class="actions">
 												<li><a href="https://app.powerbi.com/view?r=eyJrIjoiZmJkNTFiOTktMzhhOC00M2U0LWIzYmEtYTEyNzQzOGU0NjEwIiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9" class="button">Saiba Mais</a></li>
+											</ul>
+										</article>
 
 										<article>
-											<a href="#" class="image"><img src="images/pic02.png" alt="" /></a>
-											</div>
-											</section>
+											<a href="https://github.com/arthurbarbosalima123-dot/tech-challenge-fase3-aws" class="image"><img src="images/aws-pipeline.jpg" alt="Arquitetura do pipeline de dados na AWS: S3, Glue, Athena e Power BI" /></a>
+											<h4>Projeto 4 — Pipeline de Dados na AWS | State of Data Brasil</h4>
+											<p>Como está o mercado de dados no Brasil — quem são os profissionais, quanto ganham e como a IA generativa está sendo adotada? Para responder, construí em grupo um pipeline em arquitetura medalhão (Bronze → Silver → Gold) na AWS, transformando ~14.000 respostas brutas da pesquisa State of Data Brasil (2023 a 2025/26), com estruturas de colunas diferentes a cada ano, em uma base analítica única. Foram mapeadas 421 colunas de negócio entre os 3 anos e geradas 7 tabelas temáticas na camada Gold, consumidas em dashboards e em um relatório executivo C-level.
+🔵 Renda mediana de R$ 10.000/mês, com 62% dos profissionais concentrados no Sudeste 🟢 78% das empresas já priorizam IA generativa 🔴 Alerta de diversidade — a participação feminina cai de 28% no nível júnior para 9% no topo salarial.
+Conclusão: antes de expandir iniciativas de IA, as empresas precisam resolver governança e preparação dos dados (data readiness) — é a maior barreira apontada pelo próprio mercado.</p>
+											<h4>As ferramentas utilizadas foram:</h4>
+															<ul>
+																<li>Amazon S3 – Data lake com as camadas Bronze, Silver e Gold.</li>
+																<li>AWS Glue (Crawler + Data Catalog) – Descoberta e catalogação dos schemas.</li>
+																<li>AWS Glue Job (PySpark) – Tratamento, padronização e deduplicação dos dados.</li>
+																<li>Amazon Athena (SQL CTAS) – Agregações da camada Gold.</li>
+																<li>Power BI – Dashboards executivos.</li>
+															</ul>
+											<ul class="actions">
+												<li><a href="https://github.com/arthurbarbosalima123-dot/tech-challenge-fase3-aws" class="button">Saiba Mais</a></li>
+												<li><a href="https://github.com/arthurbarbosalima123-dot/tech-challenge-fase3-aws/blob/main/relatorios/relatorio_executivo_mercado_dados_ia_v8.pdf" class="button">Relatório</a></li>
+											</ul>
+										</article>
+
+										<article>
+											<a href="https://github.com/arthurbarbosalima123-dot/wine-quality-classification" class="image"><img src="images/wine-classification.jpg" alt="Importância das variáveis no modelo Random Forest de classificação de vinhos" /></a>
+											<h4>Projeto 5 — Classificação da Qualidade de Vinhos com Machine Learning</h4>
+											<p>A avaliação da qualidade de vinhos depende de especialistas humanos — um processo caro, subjetivo e demorado. É possível prever a qualidade a partir de dados físico-químicos? Analisando 1.143 vinhos tintos, dos quais apenas 159 (14%) são de alta qualidade (nota ≥ 7), treinei e comparei dois modelos de classificação: Regressão Logística e Random Forest.
+O Random Forest venceu com 91% de acurácia (contra 81%) e F1-score de 0,60 na classe de alta qualidade. A análise revelou os fatores que mais pesam: 🍷 teor alcoólico mais alto e 🧪 mais sulfatos indicam vinhos melhores, enquanto ⚗️ acidez volátil alta indica vinhos piores.
+Conclusão: produtores podem prever a qualidade ainda durante a produção e ajustar o processo antes que o vinho chegue ao consumidor — reduzindo custos e padronizando a qualidade.</p>
+											<h4>As ferramentas utilizadas foram:</h4>
+															<ul>
+																<li>Python (Pandas, NumPy) – Análise exploratória e tratamento dos dados.</li>
+																<li>Scikit-learn – Regressão Logística, Random Forest, StandardScaler e métricas de avaliação.</li>
+																<li>Matplotlib e Seaborn – Correlações, distribuições e matrizes de confusão.</li>
+																<li>Jupyter Notebook e GitHub.</li>
+															</ul>
+											<ul class="actions">
+												<li><a href="https://github.com/arthurbarbosalima123-dot/wine-quality-classification" class="button">Saiba Mais</a></li>
+												<li><a href="https://drive.google.com/file/d/1mvH4AuvPHjKeC72D7F7IUHKM446jC9SA/view?usp=drive_link" class="button">Vídeo</a></li>
+											</ul>
+										</article>
+									</div>
+								</section>
 
 											<!-- Content -->
 								<!-- Section -->
