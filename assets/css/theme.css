@@ -226,6 +226,49 @@ header.main h1 { font-size: 2.6em; }
 			border: 1px solid rgba(143, 178, 255, 0.25);
 			border-radius: 999px;
 		}
+		.edu-meta {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 0.5em;
+		}
+		.edu-card .status {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.45em;
+			padding: 0.1em 0.8em;
+			font-size: 0.85em;
+			font-weight: 600;
+			border-radius: 999px;
+		}
+			.edu-card .status.ongoing {
+				color: #FFE3A8;
+				background: rgba(255, 190, 70, 0.12);
+				border: 1px solid rgba(255, 190, 70, 0.45);
+			}
+				.edu-card .status.ongoing:before {
+					content: "";
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					background: #FFBE46;
+					animation: pulse 1.8s ease-in-out infinite;
+				}
+			.edu-card .status.done {
+				color: #B8F0CF;
+				background: rgba(52, 199, 120, 0.10);
+				border: 1px solid rgba(52, 199, 120, 0.40);
+			}
+				.edu-card .status.done:before { content: "✓"; font-weight: 700; }
+
+@keyframes pulse {
+	0%, 100% { box-shadow: 0 0 0 0 rgba(255, 190, 70, 0.6); }
+	50% { box-shadow: 0 0 0 5px rgba(255, 190, 70, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+	.edu-card .status.ongoing:before { animation: none; }
+}
+
 		.edu-card.lang {
 			display: flex;
 			align-items: center;
