@@ -11,8 +11,8 @@
 	--card: rgba(255, 255, 255, 0.04);
 	--card-hover: rgba(255, 255, 255, 0.07);
 	--border: rgba(255, 255, 255, 0.08);
-	--text: #C9D1E6;
-	--muted: #8A94B3;
+	--text: #D7DEEF;
+	--muted: #A7B1CC;
 	--heading: #F2F5FF;
 	--blue: #4F8CFF;
 	--violet: #9B6BFF;
@@ -34,6 +34,25 @@ body {
 body, input, select, textarea {
 	color: var(--text);
 	font-family: "Inter", sans-serif;
+	font-size: 17px;
+	line-height: 1.7;
+}
+/* O template reduzia a fonte para 14px em notebooks e 13px no celular */
+@media screen and (max-width: 1680px) {
+	body, input, select, textarea { font-size: 16.5px; }
+}
+@media screen and (max-width: 1280px) {
+	body, input, select, textarea { font-size: 16px; }
+}
+@media screen and (max-width: 360px) {
+	body, input, select, textarea { font-size: 15px; }
+}
+
+/* Linhas de texto com largura confortável para leitura (~75 caracteres) */
+#main section > p,
+.job ul,
+#banner p {
+	max-width: 75ch;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -123,7 +142,7 @@ header.main h1 { font-size: 2.6em; }
 	padding-left: 0.9em;
 	border-left: 3px solid var(--violet);
 }
-#main section > h2 + p { color: var(--muted); }
+#main section > h2 + p { color: var(--text); }
 
 /* Experiências em linha do tempo */
 .job {
